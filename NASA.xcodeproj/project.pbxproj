@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		EFED0DF4292C760E00A85203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0DF3292C760E00A85203 /* AppDelegate.swift */; };
 		EFED0DF6292C760E00A85203 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0DF5292C760E00A85203 /* SceneDelegate.swift */; };
-		EFED0DF8292C760E00A85203 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0DF7292C760E00A85203 /* ViewController.swift */; };
 		EFED0DFB292C760E00A85203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFED0DF9292C760E00A85203 /* Main.storyboard */; };
 		EFED0DFD292C761000A85203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFED0DFC292C761000A85203 /* Assets.xcassets */; };
 		EFED0E00292C761000A85203 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFED0DFE292C761000A85203 /* LaunchScreen.storyboard */; };
+		EFED0E08292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0E07292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift */; };
+		EFED0E0A292C874B00A85203 /* PicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0E09292C874B00A85203 /* PicCollectionViewCell.swift */; };
+		EFED0E0C292C93ED00A85203 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0E0B292C93ED00A85203 /* NetworkManager.swift */; };
+		EFED0E0E292C93FB00A85203 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0E0D292C93FB00A85203 /* Models.swift */; };
+		EFED0E11292CA71B00A85203 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EFED0E10292CA71B00A85203 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EFED0DF0292C760E00A85203 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFED0DF3292C760E00A85203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFED0DF5292C760E00A85203 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EFED0DF7292C760E00A85203 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFED0DFA292C760E00A85203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFED0DFC292C761000A85203 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFED0DFF292C761000A85203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFED0E01292C761000A85203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFED0E07292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDayCollectionViewController.swift; sourceTree = "<group>"; };
+		EFED0E09292C874B00A85203 /* PicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFED0E0B292C93ED00A85203 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EFED0E0D292C93FB00A85203 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFED0E11292CA71B00A85203 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +66,11 @@
 			children = (
 				EFED0DF3292C760E00A85203 /* AppDelegate.swift */,
 				EFED0DF5292C760E00A85203 /* SceneDelegate.swift */,
-				EFED0DF7292C760E00A85203 /* ViewController.swift */,
 				EFED0DF9292C760E00A85203 /* Main.storyboard */,
+				EFED0E07292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift */,
+				EFED0E09292C874B00A85203 /* PicCollectionViewCell.swift */,
+				EFED0E0B292C93ED00A85203 /* NetworkManager.swift */,
+				EFED0E0D292C93FB00A85203 /* Models.swift */,
 				EFED0DFC292C761000A85203 /* Assets.xcassets */,
 				EFED0DFE292C761000A85203 /* LaunchScreen.storyboard */,
 				EFED0E01292C761000A85203 /* Info.plist */,
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = NASA;
+			packageProductDependencies = (
+				EFED0E10292CA71B00A85203 /* Kingfisher */,
+			);
 			productName = NASA;
 			productReference = EFED0DF0292C760E00A85203 /* NASA.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = EFED0DE7292C760E00A85203;
+			packageReferences = (
+				EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = EFED0DF1292C760E00A85203 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFED0DF8292C760E00A85203 /* ViewController.swift in Sources */,
+				EFED0E08292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift in Sources */,
+				EFED0E0A292C874B00A85203 /* PicCollectionViewCell.swift in Sources */,
+				EFED0E0C292C93ED00A85203 /* NetworkManager.swift in Sources */,
+				EFED0E0E292C93FB00A85203 /* Models.swift in Sources */,
 				EFED0DF4292C760E00A85203 /* AppDelegate.swift in Sources */,
 				EFED0DF6292C760E00A85203 /* SceneDelegate.swift in Sources */,
 			);
@@ -293,8 +313,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +322,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.iosdevelopment.NASA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +344,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +353,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.iosdevelopment.NASA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EFED0E10292CA71B00A85203 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFED0DE8292C760E00A85203 /* Project object */;
 }
