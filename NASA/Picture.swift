@@ -1,5 +1,5 @@
 //
-//  Models.swift
+//  Picture.swift
 //  NASA
 //
 //  Created by Юрий Губин on 22.11.2022.

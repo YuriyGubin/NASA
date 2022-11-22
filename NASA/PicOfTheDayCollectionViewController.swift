@@ -9,10 +9,10 @@ import UIKit
 
 class PicOfTheDayCollectionViewController: UICollectionViewController {
     
-    let itemsPerRow: CGFloat = 2
+   
     let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
-    private var pictures: [Picture] = []
+    private var pictures: [Picture]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        pictures.count
+        pictures?.count ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -68,21 +68,15 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
 
 extension PicOfTheDayCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingWith = sectionInserts.left * (itemsPerRow + 1)
-        let availableWidth = collectionView.frame.size.width - paddingWith
-        let widthPerItem = availableWidth / itemsPerRow
-        return CGSize(width: widthPerItem * 0.99, height: widthPerItem)
+        
+        return CGSize(width: view.bounds.width, height: view.bounds.width)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        sectionInserts
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        sectionInserts.left
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        sectionInserts.left
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        sectionInserts
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        sectionInserts.left
+//    }
 }

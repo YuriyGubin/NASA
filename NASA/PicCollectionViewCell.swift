@@ -16,7 +16,8 @@ class PicCollectionViewCell: UICollectionViewCell {
     @IBOutlet var titleTextView: UITextView!
     
     func configure(with picture: Picture) {
-        titleTextView.text = picture.title
+        //titleTextView.text = picture.title
+        pictImage.frame.size.width = superview?.frame.width ?? 100
         
         guard let imageURL = URL(string: picture.url) else { return }
         let processor = DownsamplingImageProcessor(size: pictImage.bounds.size)

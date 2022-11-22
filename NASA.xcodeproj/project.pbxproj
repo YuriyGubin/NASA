@@ -15,7 +15,7 @@
 		EFED0E08292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0E07292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift */; };
 		EFED0E0A292C874B00A85203 /* PicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0E09292C874B00A85203 /* PicCollectionViewCell.swift */; };
 		EFED0E0C292C93ED00A85203 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0E0B292C93ED00A85203 /* NetworkManager.swift */; };
-		EFED0E0E292C93FB00A85203 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0E0D292C93FB00A85203 /* Models.swift */; };
+		EFED0E0E292C93FB00A85203 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0E0D292C93FB00A85203 /* Picture.swift */; };
 		EFED0E11292CA71B00A85203 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EFED0E10292CA71B00A85203 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		EFED0E07292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDayCollectionViewController.swift; sourceTree = "<group>"; };
 		EFED0E09292C874B00A85203 /* PicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCollectionViewCell.swift; sourceTree = "<group>"; };
 		EFED0E0B292C93ED00A85203 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		EFED0E0D292C93FB00A85203 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		EFED0E0D292C93FB00A85203 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 				EFED0E07292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift */,
 				EFED0E09292C874B00A85203 /* PicCollectionViewCell.swift */,
 				EFED0E0B292C93ED00A85203 /* NetworkManager.swift */,
-				EFED0E0D292C93FB00A85203 /* Models.swift */,
+				EFED0E0D292C93FB00A85203 /* Picture.swift */,
 				EFED0DFC292C761000A85203 /* Assets.xcassets */,
 				EFED0DFE292C761000A85203 /* LaunchScreen.storyboard */,
 				EFED0E01292C761000A85203 /* Info.plist */,
@@ -158,7 +158,7 @@
 				EFED0E08292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift in Sources */,
 				EFED0E0A292C874B00A85203 /* PicCollectionViewCell.swift in Sources */,
 				EFED0E0C292C93ED00A85203 /* NetworkManager.swift in Sources */,
-				EFED0E0E292C93FB00A85203 /* Models.swift in Sources */,
+				EFED0E0E292C93FB00A85203 /* Picture.swift in Sources */,
 				EFED0DF4292C760E00A85203 /* AppDelegate.swift in Sources */,
 				EFED0DF6292C760E00A85203 /* SceneDelegate.swift in Sources */,
 			);
