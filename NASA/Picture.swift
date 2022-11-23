@@ -13,4 +13,13 @@ struct Picture: Decodable {
     let hdurl: String?
     let title: String
     let url: String
+    
+    var description: String {
+        """
+        \(date)
+        \(title)
+        
+        \(explanation)
+        """
+    }
 }
