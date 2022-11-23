@@ -15,7 +15,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Asc-HO-hQi">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="E2u-b2-bxp">
                             <size key="itemSize" width="300" height="300"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -30,19 +30,37 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fVh-nY-Wh5">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Moon" translatesAutoresizingMaskIntoConstraints="NO" id="fVh-nY-Wh5">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         </imageView>
+                                        <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEI-x5-QWl">
+                                            <rect key="frame" x="0.0" y="210" width="300" height="90"/>
+                                            <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW8-9l-4xy">
+                                            <rect key="frame" x="8" y="243.33333333333334" width="284" height="15.666666666666657"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="eW8-9l-4xy" secondAttribute="trailing" constant="8" id="1CD-ZU-hvH"/>
+                                        <constraint firstItem="eW8-9l-4xy" firstAttribute="centerY" secondItem="Vap-u5-HwS" secondAttribute="centerY" multiplier="1.675" id="9xZ-AQ-3xX"/>
+                                        <constraint firstItem="eW8-9l-4xy" firstAttribute="leading" secondItem="Vap-u5-HwS" secondAttribute="leading" constant="8" id="RAb-ya-B8g"/>
+                                        <constraint firstItem="uEI-x5-QWl" firstAttribute="height" secondItem="Vap-u5-HwS" secondAttribute="height" multiplier="0.3" id="TVu-pF-OLP"/>
                                         <constraint firstAttribute="bottom" secondItem="fVh-nY-Wh5" secondAttribute="bottom" id="cvC-Fw-RSf"/>
+                                        <constraint firstAttribute="trailing" secondItem="uEI-x5-QWl" secondAttribute="trailing" id="h13-53-kqx"/>
                                         <constraint firstAttribute="trailing" secondItem="fVh-nY-Wh5" secondAttribute="trailing" id="t02-6K-rOM"/>
                                         <constraint firstItem="fVh-nY-Wh5" firstAttribute="leading" secondItem="Vap-u5-HwS" secondAttribute="leading" id="vf5-P1-sfb"/>
+                                        <constraint firstAttribute="bottom" secondItem="uEI-x5-QWl" secondAttribute="bottom" id="xzc-Xk-gdp"/>
                                         <constraint firstItem="fVh-nY-Wh5" firstAttribute="top" secondItem="Vap-u5-HwS" secondAttribute="top" id="yDn-Jm-pNG"/>
+                                        <constraint firstItem="uEI-x5-QWl" firstAttribute="leading" secondItem="Vap-u5-HwS" secondAttribute="leading" id="zda-rd-PQh"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="pictImage" destination="fVh-nY-Wh5" id="SQx-Fv-wre"/>
+                                    <outlet property="titleLabel" destination="eW8-9l-4xy" id="W7e-5H-t1L"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -83,8 +101,9 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="Moon" width="1200" height="1217"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -20,7 +20,7 @@ class NetworkManager {
     private init() {}
     
     func fetchPicture(completion: @escaping (Result<[Picture], NetworkError>) -> Void) {
-        guard let url = URL(string: "https://api.nasa.gov/planetary/apod?start_date=2022-10-22&api_key=DEMO_KEY") else {
+        guard let url = URL(string: "https://api.nasa.gov/planetary/apod?start_date=2022-10-20&api_key=DEMO_KEY") else {
             completion(.failure(.invalidURL))
             return
         }

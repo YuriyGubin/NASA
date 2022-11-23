@@ -16,6 +16,7 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fetchPictures()
         
     }
@@ -46,7 +47,9 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
         }
         let reversedPictures = pictures.reversed()
         let picture = Array(reversedPictures)[indexPath.item]
+        cell.layer.cornerRadius = 5
         cell.configure(with: picture)
+        
         
         // Configure the cell
     
@@ -69,14 +72,14 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
 extension PicOfTheDayCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: view.bounds.width, height: view.bounds.width)
+        return CGSize(width: view.bounds.width / 2 - 3, height: view.bounds.width / 2 - 3)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        sectionInserts
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        sectionInserts.left
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        3
+    }
 }

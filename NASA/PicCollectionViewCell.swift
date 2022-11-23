@@ -12,12 +12,17 @@ class PicCollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet var pictImage: UIImageView!
+//    {
+//        didSet {
+//            pictImage.layer.cornerRadius = 5
+//        }
+//    }
     
-    @IBOutlet var titleTextView: UITextView!
+    @IBOutlet var titleLabel: UILabel!
+    
     
     func configure(with picture: Picture) {
-        //titleTextView.text = picture.title
-        pictImage.frame.size.width = superview?.frame.width ?? 100
+        titleLabel.text = picture.title
         
         guard let imageURL = URL(string: picture.url) else { return }
         let processor = DownsamplingImageProcessor(size: pictImage.bounds.size)
