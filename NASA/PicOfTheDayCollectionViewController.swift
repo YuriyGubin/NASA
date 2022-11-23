@@ -67,6 +67,16 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPaths = collectionView.indexPathsForSelectedItems else { return }
+        guard let detailVC = segue.destination as? DetailViewController else { return }
+        let reversedPictures = pictures.reversed()
+        indexPaths.forEach { indexPath in
+            let picture = Array(reversedPictures)[indexPath.item]
+            detailVC.detail = picture
+        }
+    }
 }
 
 extension PicOfTheDayCollectionViewController: UICollectionViewDelegateFlowLayout {
