@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var pictImage: UIImageView!
     
     
+    @IBOutlet var titleLabel: UILabel!
     @IBOutlet var explanationTextVeiw: UITextView!
     
     var detail: Picture!
@@ -25,6 +26,17 @@ class DetailViewController: UIViewController {
     
 
     @IBAction func shareAction(_ sender: Any) {
+        guard let image = pictImage.image else { return }
+        let shareController = UIActivityViewController(
+            activityItems: [image],
+            applicationActivities: nil
+        )
+        shareController.completionWithItemsHandler = { _, bool, _, _ in
+            if bool {
+                print("Done!")
+            }
+        }
+        present(shareController, animated: true, completion: nil)
     }
     
     private func setupViews() {
@@ -32,7 +44,13 @@ class DetailViewController: UIViewController {
         pictImage.kf.indicatorType = .activity
         pictImage.kf.setImage(with: imageURL)
         
-        explanationTextVeiw.text = detail.description
+        titleLabel.text = detail.description
+        if detail.copyright != nil {
+            explanationTextVeiw.text = detail.cd
+        } else {
+            explanationTextVeiw.text = detail.explanation
+        }
+        
         
     }
 }

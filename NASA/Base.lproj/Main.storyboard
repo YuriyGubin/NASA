@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLj-T5-2ZG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLj-T5-2ZG">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -39,8 +39,8 @@
                                             <color key="backgroundColor" systemColor="systemGray2Color"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW8-9l-4xy">
-                                            <rect key="frame" x="8" y="242" width="284" height="18.666666666666686"/>
-                                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="13"/>
+                                            <rect key="frame" x="8" y="243.33333333333334" width="284" height="15.666666666666657"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="13"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -90,47 +90,47 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mwc-0r-Bqy">
                                 <rect key="frame" x="0.0" y="91.000000000000028" width="390" height="337.66666666666674"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWX-vf-PMS">
-                                <rect key="frame" x="16" y="774" width="358" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="X7T-Td-Lhg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=" Tap to share" image="square.and.arrow.up" catalog="system"/>
-                                <connections>
-                                    <action selector="shareAction:" destination="dzZ-Dc-NHl" eventType="touchUpInside" id="o9P-Et-RAN"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CMo-mD-QiJ">
-                                <rect key="frame" x="16" y="436.66666666666674" width="358" height="329.33333333333326"/>
+                                <rect key="frame" x="16" y="467.33333333333326" width="358" height="342.66666666666674"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft9-ib-QYT">
+                                <rect key="frame" x="16" y="438.66666666666669" width="358" height="20.666666666666686"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BnD-Vg-goX"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gWX-vf-PMS" firstAttribute="top" secondItem="CMo-mD-QiJ" secondAttribute="bottom" constant="8" symbolic="YES" id="417-AK-hsK"/>
+                            <constraint firstItem="BnD-Vg-goX" firstAttribute="trailing" secondItem="CMo-mD-QiJ" secondAttribute="trailing" constant="16" id="27l-T6-grz"/>
+                            <constraint firstItem="Ft9-ib-QYT" firstAttribute="top" secondItem="Mwc-0r-Bqy" secondAttribute="bottom" constant="10" id="C6h-3F-vSE"/>
                             <constraint firstItem="Mwc-0r-Bqy" firstAttribute="height" secondItem="H9c-ZF-mLO" secondAttribute="height" multiplier="0.4" id="Emb-BB-Y6r"/>
-                            <constraint firstItem="gWX-vf-PMS" firstAttribute="bottom" secondItem="BnD-Vg-goX" secondAttribute="bottom" id="Lbd-CL-wXh"/>
                             <constraint firstItem="Mwc-0r-Bqy" firstAttribute="top" secondItem="BnD-Vg-goX" secondAttribute="top" id="MXU-v9-iyS"/>
-                            <constraint firstItem="gWX-vf-PMS" firstAttribute="leading" secondItem="BnD-Vg-goX" secondAttribute="leading" constant="16" id="QO5-Wa-w6e"/>
-                            <constraint firstItem="CMo-mD-QiJ" firstAttribute="top" secondItem="Mwc-0r-Bqy" secondAttribute="bottom" constant="8" symbolic="YES" id="ddI-Es-XOG"/>
+                            <constraint firstItem="Ft9-ib-QYT" firstAttribute="leading" secondItem="BnD-Vg-goX" secondAttribute="leading" constant="16" id="PnR-xf-AjI"/>
+                            <constraint firstItem="BnD-Vg-goX" firstAttribute="trailing" secondItem="Ft9-ib-QYT" secondAttribute="trailing" constant="16" id="aBI-ay-Awa"/>
                             <constraint firstItem="Mwc-0r-Bqy" firstAttribute="leading" secondItem="BnD-Vg-goX" secondAttribute="leading" id="gVl-su-U6w"/>
                             <constraint firstItem="Mwc-0r-Bqy" firstAttribute="trailing" secondItem="BnD-Vg-goX" secondAttribute="trailing" id="hgH-tR-aTO"/>
-                            <constraint firstItem="CMo-mD-QiJ" firstAttribute="leading" secondItem="BnD-Vg-goX" secondAttribute="leading" constant="16" id="v6M-mq-uZM"/>
-                            <constraint firstItem="BnD-Vg-goX" firstAttribute="trailing" secondItem="CMo-mD-QiJ" secondAttribute="trailing" constant="16" id="xl2-rC-iHb"/>
-                            <constraint firstItem="BnD-Vg-goX" firstAttribute="trailing" secondItem="gWX-vf-PMS" secondAttribute="trailing" constant="16" id="xr4-wj-PKU"/>
+                            <constraint firstItem="CMo-mD-QiJ" firstAttribute="leading" secondItem="BnD-Vg-goX" secondAttribute="leading" constant="16" id="htc-pb-yee"/>
+                            <constraint firstItem="CMo-mD-QiJ" firstAttribute="top" secondItem="Ft9-ib-QYT" secondAttribute="bottom" constant="8" id="lIN-kI-IKJ"/>
+                            <constraint firstItem="BnD-Vg-goX" firstAttribute="bottom" secondItem="CMo-mD-QiJ" secondAttribute="bottom" id="s38-P6-jpq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="U28-Hf-Stj"/>
+                    <navigationItem key="navigationItem" id="U28-Hf-Stj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="4Bc-mF-9BV">
+                            <connections>
+                                <action selector="shareAction:" destination="dzZ-Dc-NHl" id="7X3-5S-zcy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="explanationTextVeiw" destination="CMo-mD-QiJ" id="si2-b1-dKF"/>
                         <outlet property="pictImage" destination="Mwc-0r-Bqy" id="kPR-0B-mtb"/>
+                        <outlet property="titleLabel" destination="Ft9-ib-QYT" id="Qds-P0-MJV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1g-kl-3y2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -160,12 +160,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZM-k6-jE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="475.38461538461536" y="0.7109004739336493"/>
+            <point key="canvasLocation" x="555" y="1"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="systemBackgroundColor"/>
     <resources>
         <image name="Moon" width="1200" height="1217"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

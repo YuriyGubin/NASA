@@ -8,6 +8,7 @@
 import Foundation
 
 struct Picture: Decodable {
+    let copyright: String?
     let date: String
     let explanation: String
     let hdurl: String?
@@ -18,8 +19,14 @@ struct Picture: Decodable {
         """
         \(date)
         \(title)
-        
+        """
+    }
+    
+    var cd: String {
+        """
         \(explanation)
+        
+        Copyright: \(copyright ?? "")
         """
     }
 }
