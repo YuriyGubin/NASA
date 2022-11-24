@@ -96,8 +96,7 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
 
 extension PicOfTheDayCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: view.bounds.width / 2 - 3, height: view.bounds.width / 2 - 3)
+        CGSize(width: view.bounds.width / 2 - 3, height: view.bounds.width / 2 - 3)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -116,7 +115,6 @@ extension PicOfTheDayCollectionViewController: UISearchResultsUpdating {
     }
     
     private func filterContentForSearchText(_ searchText: String) {
-        
         fiteredPictures = pictures.filter { picture in
             picture.title.lowercased().contains(searchText.lowercased())
         }
