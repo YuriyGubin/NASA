@@ -40,11 +40,12 @@ class DetailViewController: UIViewController {
     }
     
     private func setupViews() {
-        guard let imageURL = URL(string: detail.url) else { return }
+        guard let imageURL = URL(string: detail.hdurl ?? detail.url) else { return }
         pictImage.kf.indicatorType = .activity
         pictImage.kf.setImage(with: imageURL)
         
         titleLabel.text = detail.description
+        titleLabel.textColor = .red
         if detail.copyright != nil {
             explanationTextVeiw.text = detail.cd
         } else {
