@@ -19,7 +19,7 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchPicture(completion: @escaping (Result<[Picture], NetworkError>) -> Void) {
+    func fetch<T: Decodable>(_ type: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {
         guard let url = URL(string: "https://api.nasa.gov/planetary/apod?start_date=2022-10-20&api_key=DEMO_KEY") else {
             completion(.failure(.invalidURL))
             return
@@ -32,7 +32,7 @@ class NetworkManager {
                 return
             }
             do {
-                let pictures = try JSONDecoder().decode([Picture].self, from: data)
+                let pictures = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
                     completion(.success(pictures))
                 }

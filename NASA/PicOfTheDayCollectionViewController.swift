@@ -66,7 +66,7 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
     }
     
     private func fetchPictures() {
-        NetworkManager.shared.fetchPicture { result in
+        NetworkManager.shared.fetch([Picture].self) { result in
             switch result {
             case .success(let pictures):
                 self.pictures = pictures
