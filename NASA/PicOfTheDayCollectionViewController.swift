@@ -8,34 +8,31 @@
 import UIKit
 
 class PicOfTheDayCollectionViewController: UICollectionViewController {
-    
-   
+
     let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
-    private var pictures: [Picture]!
+    private let searchController = UISearchController(searchResultsController: nil)
+    private var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    private var isFiltering: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
+    
+    private var pictures: [Picture] = []
+    private var fiteredPictures: [Picture] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fetchPictures()
-        
+        setupSearchController()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        pictures?.count ?? 0
+        isFiltering ? fiteredPictures.count : pictures.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -46,14 +43,26 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
             return UICollectionViewCell()
         }
         let reversedPictures = pictures.reversed()
-        let picture = Array(reversedPictures)[indexPath.item]
+        let picture = isFiltering
+        ? fiteredPictures[indexPath.item]
+        : Array(reversedPictures)[indexPath.item]
+        
         cell.layer.cornerRadius = 5
         cell.configure(with: picture)
-        
-        
-        // Configure the cell
-    
+   
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPaths = collectionView.indexPathsForSelectedItems else { return }
+        guard let detailVC = segue.destination as? DetailViewController else { return }
+        let reversedPictures = pictures.reversed()
+        indexPaths.forEach { indexPath in
+            let picture = isFiltering
+            ? fiteredPictures[indexPath.item]
+            : Array(reversedPictures)[indexPath.item]
+            detailVC.detail = picture
+        }
     }
     
     private func fetchPictures() {
@@ -68,15 +77,21 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPaths = collectionView.indexPathsForSelectedItems else { return }
-        guard let detailVC = segue.destination as? DetailViewController else { return }
-        let reversedPictures = pictures.reversed()
-        indexPaths.forEach { indexPath in
-            let picture = Array(reversedPictures)[indexPath.item]
-            detailVC.detail = picture
+    private func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.barTintColor = .white
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
+        if let textField = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            textField.font = UIFont.boldSystemFont(ofSize: 17)
+            textField.textColor = .white
         }
     }
+    
+    
 }
 
 extension PicOfTheDayCollectionViewController: UICollectionViewDelegateFlowLayout {
@@ -91,5 +106,21 @@ extension PicOfTheDayCollectionViewController: UICollectionViewDelegateFlowLayou
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         3
+    }
+}
+
+//MARK: Search Methods
+extension PicOfTheDayCollectionViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text ?? "")
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        
+        fiteredPictures = pictures.filter { picture in
+            picture.title.lowercased().contains(searchText.lowercased())
+        }
+        
+        collectionView.reloadData()
     }
 }
