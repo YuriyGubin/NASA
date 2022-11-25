@@ -20,7 +20,7 @@ class NetworkManager {
     private init() {}
     
     func fetch<T: Decodable>(_ type: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {
-        guard let url = URL(string: "https://api.nasa.gov/planetary/apod?start_date=2022-10-20&api_key=DEMO_KEY") else {
+        guard let url = URL(string: "https://api.nasa.gov/planetary/apod?start_date=2022-10-20&api_key=HEtwem4zf5swc3Bng0kauwz4VdtIdE7zgVds3dW4") else {
             completion(.failure(.invalidURL))
             return
         }
