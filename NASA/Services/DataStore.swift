@@ -30,7 +30,7 @@ struct DataStore {
         "LessonThree",
         "LessonFour",
         "LessonFive",
-        "LessonSix",
+        "LesssonSix",
         "LessonSeven",
         "LessonEight",
         "LessonNine",

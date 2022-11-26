@@ -131,11 +131,11 @@
 			isa = PBXGroup;
 			children = (
 				6AC6767E29328B36000F5CA3 /* App */,
-				6AC6767F29328B42000F5CA3 /* Storyboards */,
-				6AC6767D29328B28000F5CA3 /* ViewControllers */,
 				6AC6767C29328B1B000F5CA3 /* Views */,
 				6AC6767A29328AFD000F5CA3 /* Services */,
 				6AC6767B29328B0B000F5CA3 /* Models */,
+				6AC6767D29328B28000F5CA3 /* ViewControllers */,
+				6AC6767F29328B42000F5CA3 /* Storyboards */,
 				EFED0DFC292C761000A85203 /* Assets.xcassets */,
 			);
 			path = NASA;

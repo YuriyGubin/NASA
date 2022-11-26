@@ -12,11 +12,6 @@ class PictureCell: UICollectionViewCell {
     
     
     @IBOutlet var pictImage: UIImageView!
-//    {
-//        didSet {
-//            pictImage.layer.cornerRadius = 5
-//        }
-//    }
     
     @IBOutlet var titleLabel: UILabel!
     
@@ -44,18 +39,4 @@ class PictureCell: UICollectionViewCell {
                 }
             }
     }
-    
-//    func configure(with picture: Picture) {
-//        titleTextView.text = picture.title
-//
-//        DispatchQueue.global().async {
-//            let stringUrl = picture.url
-//            guard let imageUrl = URL(string: stringUrl) else { return }
-//            guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-//
-//            DispatchQueue.main.async {
-//                self.pictImage.image = UIImage(data: imageData)
-//            }
-//        }
-//    }
 }
