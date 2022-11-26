@@ -39,7 +39,7 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "picture",
             for: indexPath
-        ) as? PicCollectionViewCell else {
+        ) as? PictureCell else {
             return UICollectionViewCell()
         }
         let reversedPictures = pictures.reversed()

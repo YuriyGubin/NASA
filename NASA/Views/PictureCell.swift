@@ -1,5 +1,5 @@
 //
-//  PicCollectionViewCell.swift
+//  PictureCell.swift
 //  NASA
 //
 //  Created by Юрий Губин on 22.11.2022.
@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class PicCollectionViewCell: UICollectionViewCell {
+class PictureCell: UICollectionViewCell {
     
     
     @IBOutlet var pictImage: UIImageView!
