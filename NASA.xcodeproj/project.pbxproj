@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F5B44640044398DA6787535 /* Pods_NASA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F245CC0C49BC9FF7C915D53 /* Pods_NASA.framework */; };
 		6A0F6C32292E91CD00CE18D3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0F6C31292E91CD00CE18D3 /* DetailViewController.swift */; };
 		6AC6767329322334000F5CA3 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6767229322334000F5CA3 /* DataStore.swift */; };
 		6AC67675293226A0000F5CA3 /* VideoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC67674293226A0000F5CA3 /* VideoCollectionViewController.swift */; };
@@ -25,11 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F245CC0C49BC9FF7C915D53 /* Pods_NASA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NASA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C06710833192933D2DECDF6 /* Pods-NASA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA.release.xcconfig"; path = "Target Support Files/Pods-NASA/Pods-NASA.release.xcconfig"; sourceTree = "<group>"; };
 		6A0F6C31292E91CD00CE18D3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6AC6767229322334000F5CA3 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		6AC67674293226A0000F5CA3 /* VideoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewController.swift; sourceTree = "<group>"; };
 		6AC6767629327279000F5CA3 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		6AC6767829328888000F5CA3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		A204508231FF44C026AA6328 /* Pods-NASA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA.debug.xcconfig"; path = "Target Support Files/Pods-NASA/Pods-NASA.debug.xcconfig"; sourceTree = "<group>"; };
 		EFED0DF0292C760E00A85203 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFED0DF3292C760E00A85203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFED0DF5292C760E00A85203 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFED0E11292CA71B00A85203 /* Kingfisher in Frameworks */,
+				5F5B44640044398DA6787535 /* Pods_NASA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,11 +116,31 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		C3EA37E3EF5129FB3099D2E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F245CC0C49BC9FF7C915D53 /* Pods_NASA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E70524BBD7F6B70E333DE37A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A204508231FF44C026AA6328 /* Pods-NASA.debug.xcconfig */,
+				5C06710833192933D2DECDF6 /* Pods-NASA.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EFED0DE7292C760E00A85203 = {
 			isa = PBXGroup;
 			children = (
 				EFED0DF2292C760E00A85203 /* NASA */,
 				EFED0DF1292C760E00A85203 /* Products */,
+				E70524BBD7F6B70E333DE37A /* Pods */,
+				C3EA37E3EF5129FB3099D2E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFED0E04292C761000A85203 /* Build configuration list for PBXNativeTarget "NASA" */;
 			buildPhases = (
+				6D080F517FFDC6379DB8D80B /* [CP] Check Pods Manifest.lock */,
 				EFED0DEC292C760E00A85203 /* Sources */,
 				EFED0DED292C760E00A85203 /* Frameworks */,
 				EFED0DEE292C760E00A85203 /* Resources */,
+				BE608A302B5FDAAD4EE64D78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,7 +216,7 @@
 			);
 			mainGroup = EFED0DE7292C760E00A85203;
 			packageReferences = (
-				EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
 			);
 			productRefGroup = EFED0DF1292C760E00A85203 /* Products */;
 			projectDirPath = "";
@@ -212,6 +239,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D080F517FFDC6379DB8D80B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NASA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE608A302B5FDAAD4EE64D78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NASA/Pods-NASA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NASA/Pods-NASA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NASA/Pods-NASA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EFED0DEC292C760E00A85203 /* Sources */ = {
@@ -370,6 +439,7 @@
 		};
 		EFED0E05292C761000A85203 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A204508231FF44C026AA6328 /* Pods-NASA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -401,6 +471,7 @@
 		};
 		EFED0E06292C761000A85203 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C06710833192933D2DECDF6 /* Pods-NASA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,7 +525,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -467,7 +538,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		EFED0E10292CA71B00A85203 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

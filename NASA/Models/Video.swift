@@ -8,8 +8,7 @@
 import Foundation
 
 struct Video {
-    let videoURL: String
-    let image: String
+    let videoID: String
     let title: String
     
     static func getVideos() -> [Video] {
@@ -17,16 +16,14 @@ struct Video {
         
         var videos: [Video] = []
         
-        let videosURLCount = dataStore.videosURL.count
-        let imagesCount = dataStore.images.count
+        let videosURLCount = dataStore.videosIDs.count
         let titlesCount = dataStore.titles.count
         
-        let count = min(videosURLCount, imagesCount, titlesCount)
+        let count = min(videosURLCount, titlesCount)
         
         for index in 0..<count {
             videos.append(Video(
-                videoURL: dataStore.videosURL[index],
-                image: dataStore.images[index],
+                videoID: dataStore.videosIDs[index],
                 title: dataStore.titles[index]
             ))
         }

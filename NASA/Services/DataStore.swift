@@ -11,30 +11,17 @@ struct DataStore {
     
     static let shared = DataStore()
     
-    let videosURL = [
-        "https://www.youtube.com/watch?v=o2FFtPPM3iY&list=PL2aBZuCeDwlQHIpnk-mRVKL_VQCOIsCS_&index=1",
-        "https://www.youtube.com/watch?v=DMZ5WFRbSTc&list=PL2aBZuCeDwlQHIpnk-mRVKL_VQCOIsCS_&index=2",
-        "https://www.youtube.com/watch?v=ehUIlhKhzDA&list=PL2aBZuCeDwlQHIpnk-mRVKL_VQCOIsCS_&index=3",
-        "https://www.youtube.com/watch?v=ehUIlhKhzDA&list=PL2aBZuCeDwlQHIpnk-mRVKL_VQCOIsCS_&index=4",
-        "https://www.youtube.com/watch?v=GAGFC8-wn1g&list=PL2aBZuCeDwlQHIpnk-mRVKL_VQCOIsCS_&index=5",
-        "https://www.youtube.com/watch?v=vH298zSCQzY&list=PL2aBZuCeDwlQHIpnk-mRVKL_VQCOIsCS_&index=6",
-        "https://www.youtube.com/watch?v=vH298zSCQzY&list=PL2aBZuCeDwlQHIpnk-mRVKL_VQCOIsCS_&index=7",
-        "https://www.youtube.com/watch?v=vH298zSCQzY&list=PL2aBZuCeDwlQHIpnk-mRVKL_VQCOIsCS_&index=8",
-        "https://www.youtube.com/watch?v=vH298zSCQzY&list=PL2aBZuCeDwlQHIpnk-mRVKL_VQCOIsCS_&index=9",
-        "https://www.youtube.com/watch?v=vH298zSCQzY&list=PL2aBZuCeDwlQHIpnk-mRVKL_VQCOIsCS_&index=10"
-    ]
-    
-    let images = [
-        "LessonOne",
-        "LessonTwo",
-        "LessonThree",
-        "LessonFour",
-        "LessonFive",
-        "LesssonSix",
-        "LessonSeven",
-        "LessonEight",
-        "LessonNine",
-        "LessonTen"
+    let videosIDs = [
+        "o2FFtPPM3iY",
+        "DMZ5WFRbSTc",
+        "ehUIlhKhzDA",
+        "nBN3jheTBG0",
+        "GAGFC8-wn1g",
+        "vH298zSCQzY",
+        "SN5-DnOHQmE",
+        "o33NZIlfKys",
+        "6UYLRJ6uylg",
+        "N_Igfs9aS1A"
     ]
     
     let titles = [

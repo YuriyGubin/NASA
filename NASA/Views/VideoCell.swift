@@ -7,18 +7,14 @@
 
 import UIKit
 import AVKit
+import youtube_ios_player_helper
 
 class VideoCell: UICollectionViewCell {
-    
-    @IBOutlet var videoImageView: UIImageView!
-    
-    @IBOutlet var videoTitleLabel: UILabel!
-    
+
+    @IBOutlet var playerView: YTPlayerView!
     
     func configure(with video: Video) {
-        videoImageView.image = UIImage(named: video.image)
-        videoTitleLabel.text = video.title
-        
-        
+        playerView.load(withVideoId: video.videoID)
     }
+
 }

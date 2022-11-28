@@ -65,6 +65,10 @@ class PicOfTheDayCollectionViewController: UICollectionViewController {
         }
     }
     
+    @IBAction func cancelBtn() {
+        dismiss(animated: true)
+    }
+    
     private func fetchPictures() {
         NetworkManager.shared.fetch([Picture].self) { result in
             switch result {

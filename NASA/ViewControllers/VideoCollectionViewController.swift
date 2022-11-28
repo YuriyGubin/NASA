@@ -7,6 +7,7 @@
 
 import UIKit
 import AVKit
+import youtube_ios_player_helper
 
 class VideoCollectionViewController: UICollectionViewController {
     
@@ -38,24 +39,28 @@ class VideoCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let video = videos[indexPath.item]
-        
-        let videoURL = URL(string: video.videoURL)
-        let player = AVPlayer(url: (videoURL ?? URL(string: "https://youtu.be/TnPtNw38p2g")!))
-                              
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = player
-                              
-        present(playerViewController, animated: true) {
-            player.play()
-        }
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let video = videos[indexPath.item]
+//        
+//        let videoURL = URL(string: "https://www.videvo.net/video/amazing-shots-of-earth-from-the-international-space-station-in-4k-5/628527/")
+//        let player = AVPlayer(url: videoURL!)
+//                              
+//        let playerViewController = AVPlayerViewController()
+//        playerViewController.player = player
+//                              
+//        present(playerViewController, animated: true) {
+//            player.play()
+//        }
+//    }
+    
+    @IBAction func cancelBtn() {
+        dismiss(animated: true)
     }
 }
 
 extension VideoCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: view.bounds.width, height: view.bounds.width * 0.8)
+        CGSize(width: view.bounds.width, height: view.bounds.width * 0.6)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -63,6 +68,6 @@ extension VideoCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        10
+        20
     }
 }

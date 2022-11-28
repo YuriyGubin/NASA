@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Med-zK-rQF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Med-zK-rQF">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -23,6 +23,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars2" id="NZ2-FA-njw">
+                            <rect key="frame" x="0.0" y="-91" width="390" height="844"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="picture" id="qGP-3i-4uN" customClass="PictureCell" customModule="NASA" customModuleProvider="target">
                                 <rect key="frame" x="45" y="0.0" width="300" height="300"/>
@@ -73,6 +77,11 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Pictures of the Day" id="ezV-4M-DxN">
                         <barButtonItem key="backBarButtonItem" title="Back" id="FpU-IL-PoP"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="sEN-cu-WFL">
+                            <connections>
+                                <action selector="cancelBtn" destination="qZd-HJ-oDr" id="jS2-8Q-oGf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdP-Fx-FJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -163,7 +172,7 @@
             </objects>
             <point key="canvasLocation" x="555" y="1"/>
         </scene>
-        <!--Video Collection View Controller-->
+        <!--Back To School-->
         <scene sceneID="evJ-dF-hOc">
             <objects>
                 <collectionViewController id="fic-Cu-MbD" customClass="VideoCollectionViewController" customModule="NASA" customModuleProvider="target" sceneMemberID="viewController">
@@ -177,6 +186,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars2" id="dnF-9o-A5g">
+                            <rect key="frame" x="0.0" y="-91" width="390" height="844"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="video" id="vdw-Hf-B5B" customClass="VideoCell" customModule="NASA" customModuleProvider="target">
                                 <rect key="frame" x="45" y="0.0" width="300" height="220"/>
@@ -185,30 +198,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="220"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sPS-H3-18R">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="160"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PM-ac-KQ8">
-                                            <rect key="frame" x="0.0" y="159" width="300" height="61"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLr-9R-ZcX" customClass="YTPlayerView">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="220"/>
+                                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="7PM-ac-KQ8" firstAttribute="top" secondItem="sPS-H3-18R" secondAttribute="bottom" constant="-1" id="BFT-U4-Okf"/>
-                                        <constraint firstItem="sPS-H3-18R" firstAttribute="height" secondItem="d64-al-8ad" secondAttribute="height" multiplier="0.727273" id="FEb-0x-v2B"/>
-                                        <constraint firstItem="sPS-H3-18R" firstAttribute="top" secondItem="d64-al-8ad" secondAttribute="top" id="HhR-Fo-Cd4"/>
-                                        <constraint firstItem="7PM-ac-KQ8" firstAttribute="leading" secondItem="d64-al-8ad" secondAttribute="leading" id="Lgt-g4-KNe"/>
-                                        <constraint firstItem="sPS-H3-18R" firstAttribute="leading" secondItem="d64-al-8ad" secondAttribute="leading" id="YoV-5H-XfL"/>
-                                        <constraint firstAttribute="bottom" secondItem="7PM-ac-KQ8" secondAttribute="bottom" id="hDR-Tj-OU1"/>
-                                        <constraint firstAttribute="trailing" secondItem="7PM-ac-KQ8" secondAttribute="trailing" id="j8t-e5-LkF"/>
-                                        <constraint firstAttribute="trailing" secondItem="sPS-H3-18R" secondAttribute="trailing" id="nNb-Qv-T3B"/>
+                                        <constraint firstItem="TLr-9R-ZcX" firstAttribute="leading" secondItem="d64-al-8ad" secondAttribute="leading" id="JEi-kP-fWD"/>
+                                        <constraint firstItem="TLr-9R-ZcX" firstAttribute="top" secondItem="d64-al-8ad" secondAttribute="top" id="WiP-7t-3uR"/>
+                                        <constraint firstAttribute="trailing" secondItem="TLr-9R-ZcX" secondAttribute="trailing" id="XyN-QG-zSB"/>
+                                        <constraint firstAttribute="bottom" secondItem="TLr-9R-ZcX" secondAttribute="bottom" id="hZZ-4b-nZD"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
-                                    <outlet property="videoImageView" destination="sPS-H3-18R" id="AWr-H3-ple"/>
-                                    <outlet property="videoTitleLabel" destination="7PM-ac-KQ8" id="5jp-L4-MhT"/>
+                                    <outlet property="playerView" destination="TLr-9R-ZcX" id="cxq-Vy-yDR"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -217,7 +220,13 @@
                             <outlet property="delegate" destination="fic-Cu-MbD" id="2gL-Hy-vtx"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ljc-UU-NGf"/>
+                    <navigationItem key="navigationItem" title="Back To School" id="ljc-UU-NGf">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="L24-J9-xVx">
+                            <connections>
+                                <action selector="cancelBtn" destination="fic-Cu-MbD" id="Ra3-wg-GT9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9E-jP-Yaz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -291,11 +300,15 @@
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Moon" width="1200" height="1217"/>
+        <image name="stars2" width="4000" height="6000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
