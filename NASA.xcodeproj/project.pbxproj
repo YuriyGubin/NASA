@@ -13,6 +13,7 @@
 		6AC67675293226A0000F5CA3 /* VideoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC67674293226A0000F5CA3 /* VideoCollectionViewController.swift */; };
 		6AC6767729327279000F5CA3 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6767629327279000F5CA3 /* VideoCell.swift */; };
 		6AC6767929328888000F5CA3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6767829328888000F5CA3 /* Video.swift */; };
+		EF1FF05B2935E3A3006BF1DE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1FF05A2935E3A3006BF1DE /* StartViewController.swift */; };
 		EFED0DF4292C760E00A85203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0DF3292C760E00A85203 /* AppDelegate.swift */; };
 		EFED0DF6292C760E00A85203 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED0DF5292C760E00A85203 /* SceneDelegate.swift */; };
 		EFED0DFB292C760E00A85203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFED0DF9292C760E00A85203 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		6AC6767629327279000F5CA3 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		6AC6767829328888000F5CA3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		A204508231FF44C026AA6328 /* Pods-NASA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA.debug.xcconfig"; path = "Target Support Files/Pods-NASA/Pods-NASA.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1FF05A2935E3A3006BF1DE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		EFED0DF0292C760E00A85203 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFED0DF3292C760E00A85203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFED0DF5292C760E00A85203 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				6A0F6C31292E91CD00CE18D3 /* DetailViewController.swift */,
 				EFED0E07292C78CB00A85203 /* PicOfTheDayCollectionViewController.swift */,
 				6AC67674293226A0000F5CA3 /* VideoCollectionViewController.swift */,
+				EF1FF05A2935E3A3006BF1DE /* StartViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -130,7 +133,6 @@
 				A204508231FF44C026AA6328 /* Pods-NASA.debug.xcconfig */,
 				5C06710833192933D2DECDF6 /* Pods-NASA.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -216,7 +218,7 @@
 			);
 			mainGroup = EFED0DE7292C760E00A85203;
 			packageReferences = (
-				EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+				EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = EFED0DF1292C760E00A85203 /* Products */;
 			projectDirPath = "";
@@ -292,6 +294,7 @@
 				EFED0E0A292C874B00A85203 /* PictureCell.swift in Sources */,
 				EFED0E0C292C93ED00A85203 /* NetworkManager.swift in Sources */,
 				EFED0E0E292C93FB00A85203 /* Picture.swift in Sources */,
+				EF1FF05B2935E3A3006BF1DE /* StartViewController.swift in Sources */,
 				6AC6767729327279000F5CA3 /* VideoCell.swift in Sources */,
 				EFED0DF4292C760E00A85203 /* AppDelegate.swift in Sources */,
 				6AC6767929328888000F5CA3 /* Video.swift in Sources */,
@@ -525,7 +528,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+		EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -538,7 +541,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		EFED0E10292CA71B00A85203 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			package = EFED0E0F292CA71B00A85203 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
